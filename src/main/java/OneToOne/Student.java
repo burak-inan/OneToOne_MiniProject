@@ -15,6 +15,8 @@ public class Student {
     @JoinColumn(name = "library_card_id")
     private Library libraryCard;
 
+
+    //Constructors
     public Student(int id, String first_name, String last_name, Library libraryCard) {
         this.id = id;
         this.first_name = first_name;
@@ -22,10 +24,14 @@ public class Student {
         this.libraryCard = libraryCard;
     }
 
+    // When we created constructor, default constructor is removed automatically.
+    // That is why we create empty one if necessary
     public Student(){
 
     }
 
+
+    // getter--setter
     public int getId() {
         return id;
     }
@@ -58,6 +64,9 @@ public class Student {
         this.libraryCard = libraryCard;
     }
 
+
+
+    // toString
     @Override
     public String toString() {
         return "Student{" +
